@@ -16,8 +16,8 @@ function App() {
       <Router>
         <Layout />
         <Routes>
-        <Route path="/" element={<Dashboard />} />          <Route path="/projects" component={Projects} />
-          {/* Add more routes for other pages here */}
+        <Route path="/" element={<Dashboard />} />      
+        <Route path="/projects" component={Projects} />
         </Routes>
       </Router>
     </ThemeProvider>

@@ -8,17 +8,31 @@ import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import InputBase from '@mui/material/InputBase'; // Import InputBase for the search bar
-import logo from '../Assets/logo.png'; // Assuming the "Assets" folder is one level up from the component folder
+import InputBase from '@mui/material/InputBase';
+import { useLocation } from 'react-router-dom'; 
+import logo from '../Assets/logo.png';
 
 const Header = () => {
+  const location = useLocation(); 
+
+  
+  const getPageName = () => {
+    switch (location.pathname) {
+      case '/dashboard':
+        return 'Dashboard';
+      case '/projects':
+        return 'Projects';
+      default:
+        return 'Page Not Found';
+    }
+  };
+
   return (
     <AppBar position="static" sx={{ backgroundColor: 'transparent' }}>
       <Toolbar style={{ justifyContent: 'space-between' }}>
         {/* Project Logo */}
         <img src={logo} alt="Logo" style={{ width: '50px', marginRight: '10px' }} />
 
-        {/* Project Title */}
         <Typography
           variant="h6"
           component="div"
@@ -32,7 +46,7 @@ const Header = () => {
             color: '#3C557A',
           }}
         >
-          Projects
+          {getPageName()}
         </Typography>
 
         {/* Centered Search Bar and Icon */}

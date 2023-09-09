@@ -36,37 +36,37 @@ const Sidebar = () => {
       <ListItemIcon>
       <DashboardIcon /> {/* Dashboard icon */}
       </ListItemIcon>
-      <ListItemText primary="Dashboard" /> {/* Dashboard item text */}
+      <ListItemText primary="Dashboard" /> 
       </ListItem>
         <ListItem button component={Link} to="/Projects">
           <ListItemIcon>
-            <AssignmentIcon /> {/* Projects icon */}
+            <AssignmentIcon /> 
           </ListItemIcon>
-          <ListItemText primary="Projects" /> {/* Projects item text */}
+          <ListItemText primary="Projects" /> 
         </ListItem>
         <ListItem button component={Link} to="/Modules">
           <ListItemIcon>
-            <ExtensionIcon /> {/* Modules icon */}
+            <ExtensionIcon /> 
           </ListItemIcon>
-          <ListItemText primary="Modules" /> {/* Modules item text */}
+          <ListItemText primary="Modules" /> 
         </ListItem>
         <ListItem button component={Link} to="/Sprints">
           <ListItemIcon>
-            <ScheduleIcon /> {/* Sprints icon */}
+            <ScheduleIcon />
           </ListItemIcon>
-          <ListItemText primary="Sprints" /> {/* Sprints item text */}
+          <ListItemText primary="Sprints" /> 
         </ListItem>
         <ListItem button component={Link} to="/Members">
           <ListItemIcon>
-            <GroupIcon /> {/* Members icon */}
+            <GroupIcon /> 
           </ListItemIcon>
-          <ListItemText primary="Members" /> {/* Members item text */}
+          <ListItemText primary="Members" /> 
         </ListItem>
         <ListItem button component={Link} to="/Reports">
           <ListItemIcon>
-            <ReportIcon /> {/* Reports icon */}
+            <ReportIcon /> 
           </ListItemIcon>
-          <ListItemText primary="Reports" /> {/* Reports item text */}
+          <ListItemText primary="Reports" /> 
         </ListItem>
       </List>
 {/* Container for the logout button at the bottom */}
@@ -80,6 +80,5 @@ const Sidebar = () => {
     </Drawer>
   );
 };
-// Export the Sidebar component as the default export
 
 export default Sidebar;

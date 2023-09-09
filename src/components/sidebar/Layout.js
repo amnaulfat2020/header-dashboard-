@@ -1,14 +1,26 @@
 import React from 'react';
-import Sidebar from './Sidebar'; // Adjust the path if needed
+import Header from '../Header';
+import Sidebar from './Sidebar';
+import { Grid } from '@mui/material';
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <div>
-      {/* You can add any additional layout components or logic here */}
-      <Sidebar />
-      {/* Other components or content */}
+      <Header />
+      <Grid container>
+        {/* Sidebar */}
+        <Grid item>
+          <Sidebar />
+        </Grid>
+
+        {/* Main content */}
+        <Grid item xs>
+          {children}
+        </Grid>
+      </Grid>
     </div>
   );
 };
 
 export default Layout;
+

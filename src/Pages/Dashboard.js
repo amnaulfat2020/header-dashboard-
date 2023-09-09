@@ -5,10 +5,11 @@ const Dashboard = () => {
   return (
     <div>
       <Header /> {/* Include the Header component */}
-      <div>This is the dashboard page content.</div>
+      <div>Dashboard Page!</div>
       {/* Other page content */}
     </div>
   );
 };
 
 export default Dashboard;
+
